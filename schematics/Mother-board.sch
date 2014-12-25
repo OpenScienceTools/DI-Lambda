@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.1.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -439,45 +439,39 @@ W = angled&lt;p&gt;
 </class>
 </classes>
 <parts>
-<part name="U$1" library="jet-lib" deviceset="ARDUINONANO" device=""/>
+<part name="ARDUINO" library="jet-lib" deviceset="ARDUINONANO" device=""/>
 <part name="SV1" library="con-lstb" deviceset="MA04-1" device=""/>
 <part name="SV2" library="con-lstb" deviceset="MA07-1" device=""/>
 <part name="GND1" library="supply1" deviceset="GND" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="GND3" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="2.54" y="78.74"/>
+<instance part="ARDUINO" gate="G$1" x="2.54" y="78.74"/>
 <instance part="SV1" gate="1" x="-30.48" y="66.04"/>
 <instance part="SV2" gate="1" x="-30.48" y="33.02"/>
 <instance part="GND1" gate="1" x="-20.32" y="55.88"/>
 <instance part="GND2" gate="1" x="-20.32" y="22.86"/>
-<instance part="GND3" gate="1" x="-5.08" y="58.42"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="VCC" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="+5V"/>
-<wire x1="27.94" y1="60.96" x2="35.56" y2="60.96" width="0.1524" layer="91"/>
-<label x="38.1" y="63.5" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="SV2" gate="1" pin="7"/>
 <wire x1="-22.86" y1="40.64" x2="-20.32" y2="40.64" width="0.1524" layer="91"/>
+<label x="-17.78" y="40.64" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="ARDUINO" gate="G$1" pin="3V3"/>
+<wire x1="27.94" y1="10.16" x2="33.02" y2="10.16" width="0.1524" layer="91"/>
+<label x="35.56" y="10.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="GND" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="GND"/>
-<wire x1="-2.54" y1="60.96" x2="-5.08" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="GND3" gate="1" pin="GND"/>
-</segment>
 <segment>
 <pinref part="SV2" gate="1" pin="1"/>
 <wire x1="-22.86" y1="25.4" x2="-20.32" y2="25.4" width="0.1524" layer="91"/>
@@ -489,19 +483,24 @@ W = angled&lt;p&gt;
 <wire x1="-22.86" y1="60.96" x2="-20.32" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="60.96" x2="-20.32" y2="58.42" width="0.1524" layer="91"/>
 </segment>
+<segment>
+<pinref part="ARDUINO" gate="G$1" pin="GND1"/>
+<wire x1="27.94" y1="71.12" x2="33.02" y2="71.12" width="0.1524" layer="91"/>
+<label x="33.02" y="71.12" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="N$1" class="0">
 <segment>
 <pinref part="SV1" gate="1" pin="4"/>
 <wire x1="-22.86" y1="68.58" x2="-15.24" y2="68.58" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="68.58" x2="-15.24" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D1/TX"/>
+<pinref part="ARDUINO" gate="G$1" pin="D1/TX"/>
 <wire x1="-15.24" y1="76.2" x2="-2.54" y2="76.2" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="D2"/>
+<pinref part="ARDUINO" gate="G$1" pin="D2"/>
 <wire x1="-2.54" y1="55.88" x2="-10.16" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="55.88" x2="-10.16" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="SV1" gate="1" pin="3"/>
@@ -513,13 +512,13 @@ W = angled&lt;p&gt;
 <pinref part="SV1" gate="1" pin="2"/>
 <wire x1="-22.86" y1="63.5" x2="-15.24" y2="63.5" width="0.1524" layer="91"/>
 <wire x1="-15.24" y1="63.5" x2="-15.24" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="U$1" gate="G$1" pin="D3"/>
+<pinref part="ARDUINO" gate="G$1" pin="D3"/>
 <wire x1="-15.24" y1="50.8" x2="-2.54" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="SDA" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="D4"/>
+<pinref part="ARDUINO" gate="G$1" pin="D4"/>
 <wire x1="-2.54" y1="45.72" x2="-10.16" y2="45.72" width="0.1524" layer="91"/>
 <wire x1="-10.16" y1="45.72" x2="-10.16" y2="38.1" width="0.1524" layer="91"/>
 <pinref part="SV2" gate="1" pin="6"/>
@@ -529,7 +528,7 @@ W = angled&lt;p&gt;
 </net>
 <net name="SCL" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="D5"/>
+<pinref part="ARDUINO" gate="G$1" pin="D5"/>
 <wire x1="-2.54" y1="40.64" x2="-7.62" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="-7.62" y1="40.64" x2="-7.62" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="SV2" gate="1" pin="5"/>
@@ -539,7 +538,7 @@ W = angled&lt;p&gt;
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="D6"/>
+<pinref part="ARDUINO" gate="G$1" pin="D6"/>
 <wire x1="-2.54" y1="35.56" x2="-5.08" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="35.56" x2="-5.08" y2="33.02" width="0.1524" layer="91"/>
 <pinref part="SV2" gate="1" pin="4"/>
@@ -548,14 +547,14 @@ W = angled&lt;p&gt;
 </net>
 <net name="N$7" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="D7"/>
+<pinref part="ARDUINO" gate="G$1" pin="D7"/>
 <pinref part="SV2" gate="1" pin="3"/>
 <wire x1="-2.54" y1="30.48" x2="-22.86" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="D8"/>
+<pinref part="ARDUINO" gate="G$1" pin="D8"/>
 <wire x1="-2.54" y1="25.4" x2="-5.08" y2="25.4" width="0.1524" layer="91"/>
 <wire x1="-5.08" y1="25.4" x2="-5.08" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="SV2" gate="1" pin="2"/>
