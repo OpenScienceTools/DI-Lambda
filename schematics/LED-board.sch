@@ -2284,7 +2284,7 @@ W = angled&lt;p&gt;
 <wire x1="68.58" y1="50.8" x2="78.74" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$7" class="0">
+<net name="GND" class="0">
 <segment>
 <pinref part="LED1" gate="G$1" pin="C"/>
 <wire x1="20.32" y1="43.18" x2="20.32" y2="35.56" width="0.1524" layer="91"/>
