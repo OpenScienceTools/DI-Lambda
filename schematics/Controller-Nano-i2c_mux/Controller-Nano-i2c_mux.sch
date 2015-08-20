@@ -79,72 +79,6 @@ F 3 "" H 2750 3100 60  0000 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L R R2
-U 1 1 55C4E7FD
-P 3700 4900
-F 0 "R2" V 3650 4750 50  0000 C CNN
-F 1 "470" V 3700 4900 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 3630 4900 30  0001 C CNN
-F 3 "" H 3700 4900 30  0000 C CNN
-	1    3700 4900
-	0    1    1    0   
-$EndComp
-$Comp
-L R R1
-U 1 1 55C4E870
-P 3700 4800
-F 0 "R1" V 3650 4650 50  0000 C CNN
-F 1 "330" V 3700 4800 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 3630 4800 30  0001 C CNN
-F 3 "" H 3700 4800 30  0000 C CNN
-	1    3700 4800
-	0    1    1    0   
-$EndComp
-$Comp
-L R R4
-U 1 1 55C4E8B3
-P 3700 5150
-F 0 "R4" V 3650 5000 50  0000 C CNN
-F 1 "470" V 3700 5150 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 3630 5150 30  0001 C CNN
-F 3 "" H 3700 5150 30  0000 C CNN
-	1    3700 5150
-	0    1    1    0   
-$EndComp
-$Comp
-L R R3
-U 1 1 55C4E8DC
-P 3700 5050
-F 0 "R3" V 3650 4900 50  0000 C CNN
-F 1 "330" V 3700 5050 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 3630 5050 30  0001 C CNN
-F 3 "" H 3700 5050 30  0000 C CNN
-	1    3700 5050
-	0    1    1    0   
-$EndComp
-$Comp
-L R R6
-U 1 1 55C4E903
-P 3700 5400
-F 0 "R6" V 3650 5250 50  0000 C CNN
-F 1 "470" V 3700 5400 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 3630 5400 30  0001 C CNN
-F 3 "" H 3700 5400 30  0000 C CNN
-	1    3700 5400
-	0    1    1    0   
-$EndComp
-$Comp
-L R R5
-U 1 1 55C4E932
-P 3700 5300
-F 0 "R5" V 3650 5150 50  0000 C CNN
-F 1 "330" V 3700 5300 50  0000 C CNN
-F 2 "Resistors_SMD:R_0805" V 3630 5300 30  0001 C CNN
-F 3 "" H 3700 5300 30  0000 C CNN
-	1    3700 5300
-	0    1    1    0   
-$EndComp
-$Comp
 L GND #PWR01
 U 1 1 55C52625
 P 4550 6200
@@ -289,10 +223,10 @@ NoConn ~ 4550 4500
 NoConn ~ 4550 4400
 NoConn ~ 6650 4700
 $Comp
-L LED D1
+L LED LED3
 U 1 1 55C680DF
 P 7600 4350
-F 0 "D1" H 7600 4450 50  0000 C CNN
+F 0 "LED3" H 7600 4450 50  0000 C CNN
 F 1 "LED" H 7600 4250 50  0000 C CNN
 F 2 "LEDs:LED-5MM" H 7600 4350 60  0001 C CNN
 F 3 "" H 7600 4350 60  0000 C CNN
@@ -300,10 +234,10 @@ F 3 "" H 7600 4350 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED D2
+L LED LED2
 U 1 1 55C68161
 P 7950 4350
-F 0 "D2" H 7950 4450 50  0000 C CNN
+F 0 "LED2" H 7950 4450 50  0000 C CNN
 F 1 "LED" H 7950 4250 50  0000 C CNN
 F 2 "LEDs:LED-5MM" H 7950 4350 60  0001 C CNN
 F 3 "" H 7950 4350 60  0000 C CNN
@@ -311,10 +245,10 @@ F 3 "" H 7950 4350 60  0000 C CNN
 	0    -1   -1   0   
 $EndComp
 $Comp
-L LED D3
+L LED LED1
 U 1 1 55C681B7
 P 8250 4350
-F 0 "D3" H 8250 4450 50  0000 C CNN
+F 0 "LED1" H 8250 4450 50  0000 C CNN
 F 1 "LED" H 8250 4250 50  0000 C CNN
 F 2 "LEDs:LED-5MM" H 8250 4350 60  0001 C CNN
 F 3 "" H 8250 4350 60  0000 C CNN
@@ -369,42 +303,31 @@ NoConn ~ 6650 4800
 NoConn ~ 6650 4900
 NoConn ~ 6650 5500
 NoConn ~ 6650 5600
-$Comp
-L R_PACK8 RP1
-U 1 1 55C6D47D
-P 8550 2750
-F 0 "RP1" H 8550 3200 50  0000 C CNN
-F 1 "R_PACK8" H 8550 2300 50  0000 C CNN
-F 2 "Resistors_SMD:R_Array_Convex_8x0602" H 8550 2750 60  0001 C CNN
-F 3 "" H 8550 2750 60  0000 C CNN
-	1    8550 2750
-	1    0    0    -1  
-$EndComp
-Text GLabel 8150 2400 0    60   Input ~ 0
+Text GLabel 8200 2050 0    60   Input ~ 0
 SCL
-Text GLabel 7850 2500 0    60   Input ~ 0
+Text GLabel 7850 2150 0    60   Input ~ 0
 SD0
-Text GLabel 8150 2600 0    60   Input ~ 0
+Text GLabel 8200 2250 0    60   Input ~ 0
 SD1
-Text GLabel 7850 2700 0    60   Input ~ 0
+Text GLabel 7850 2350 0    60   Input ~ 0
 SD2
-Text GLabel 8150 2800 0    60   Input ~ 0
+Text GLabel 8200 2700 0    60   Input ~ 0
 SC2
-Text GLabel 7850 2900 0    60   Input ~ 0
+Text GLabel 7850 2800 0    60   Input ~ 0
 SC1
-Text GLabel 8150 3000 0    60   Input ~ 0
+Text GLabel 8200 2900 0    60   Input ~ 0
 SC0
-Text GLabel 7850 3100 0    60   Input ~ 0
+Text GLabel 7850 3000 0    60   Input ~ 0
 SDA
 $Comp
 L +3V3 #PWR010
 U 1 1 55C6F845
-P 9100 2250
-F 0 "#PWR010" H 9100 2100 50  0001 C CNN
-F 1 "+3V3" H 9100 2390 50  0000 C CNN
-F 2 "" H 9100 2250 60  0000 C CNN
-F 3 "" H 9100 2250 60  0000 C CNN
-	1    9100 2250
+P 9200 1950
+F 0 "#PWR010" H 9200 1800 50  0001 C CNN
+F 1 "+3V3" H 9200 2090 50  0000 C CNN
+F 2 "" H 9200 1950 60  0000 C CNN
+F 3 "" H 9200 1950 60  0000 C CNN
+	1    9200 1950
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -464,54 +387,6 @@ F 3 "" H 2300 3950 60  0000 C CNN
 $EndComp
 NoConn ~ 6650 4500
 Wire Wire Line
-	2500 4000 2500 4650
-Connection ~ 2500 4250
-Connection ~ 2500 4350
-Connection ~ 2500 4450
-Wire Wire Line
-	3100 4800 3550 4800
-Wire Wire Line
-	3100 4900 3550 4900
-Wire Wire Line
-	4550 4800 3850 4800
-Wire Wire Line
-	3850 4900 4550 4900
-Wire Wire Line
-	4550 5000 3950 5000
-Wire Wire Line
-	3950 5000 3950 5050
-Wire Wire Line
-	4550 5100 4050 5100
-Wire Wire Line
-	4050 5100 4050 5150
-Wire Wire Line
-	4050 5150 3850 5150
-Wire Wire Line
-	3950 5050 3850 5050
-Wire Wire Line
-	2900 5100 3350 5100
-Wire Wire Line
-	3350 5050 3350 5150
-Wire Wire Line
-	3350 5050 3550 5050
-Connection ~ 3350 5100
-Wire Wire Line
-	3250 5400 3550 5400
-Wire Wire Line
-	3250 5300 3550 5300
-Wire Wire Line
-	3850 5300 4150 5300
-Wire Wire Line
-	4150 5300 4150 5200
-Wire Wire Line
-	4150 5200 4550 5200
-Wire Wire Line
-	3850 5400 4250 5400
-Wire Wire Line
-	4250 5400 4250 5300
-Wire Wire Line
-	4250 5300 4550 5300
-Wire Wire Line
 	4550 5400 4550 6200
 Connection ~ 4550 5700
 Connection ~ 4550 5800
@@ -522,8 +397,6 @@ Wire Wire Line
 Connection ~ 4550 6050
 Connection ~ 4550 5600
 Connection ~ 4550 5500
-Wire Wire Line
-	2500 4650 3000 4650
 Wire Wire Line
 	6650 5700 7050 5700
 Wire Wire Line
@@ -605,60 +478,11 @@ Wire Wire Line
 Wire Wire Line
 	8250 4550 8250 4750
 Wire Wire Line
-	6650 5400 8250 5400
+	8250 5200 8250 5050
 Wire Wire Line
-	8250 5400 8250 5050
-Wire Wire Line
-	6650 5300 7950 5300
-Wire Wire Line
-	7950 5300 7950 5050
-Wire Wire Line
-	6650 5200 7600 5200
+	7950 5200 7950 5050
 Wire Wire Line
 	7600 5200 7600 5050
-Wire Wire Line
-	8150 2400 8350 2400
-Wire Wire Line
-	7850 2500 8350 2500
-Wire Wire Line
-	8150 2600 8350 2600
-Wire Wire Line
-	7850 2700 8350 2700
-Wire Wire Line
-	8150 2800 8350 2800
-Wire Wire Line
-	7850 2900 8350 2900
-Wire Wire Line
-	8150 3000 8350 3000
-Wire Wire Line
-	7850 3100 8350 3100
-Wire Wire Line
-	9100 2400 9100 2250
-Wire Wire Line
-	8750 2400 9100 2400
-Wire Wire Line
-	8900 2400 8900 3100
-Wire Wire Line
-	8900 3100 8750 3100
-Wire Wire Line
-	8750 3000 8900 3000
-Connection ~ 8900 3000
-Wire Wire Line
-	8750 2900 8900 2900
-Connection ~ 8900 2900
-Wire Wire Line
-	8750 2800 8900 2800
-Connection ~ 8900 2800
-Wire Wire Line
-	8750 2700 8900 2700
-Connection ~ 8900 2700
-Wire Wire Line
-	8750 2600 8900 2600
-Connection ~ 8900 2600
-Wire Wire Line
-	8750 2500 8900 2500
-Connection ~ 8900 2500
-Connection ~ 8900 2400
 Wire Wire Line
 	4900 1100 4900 1050
 Wire Wire Line
@@ -681,8 +505,6 @@ Wire Wire Line
 	2300 3950 2300 4150
 Wire Wire Line
 	2300 4150 2500 4150
-Wire Wire Line
-	3350 5150 3550 5150
 $Comp
 L CONN_01X04 P3
 U 1 1 55C96909
@@ -694,8 +516,6 @@ F 3 "" H 1250 1350 60  0000 C CNN
 	1    1250 1350
 	-1   0    0    -1  
 $EndComp
-Wire Wire Line
-	3000 4650 3000 4450
 Text GLabel 3100 4150 2    60   Input ~ 0
 LED1
 Text GLabel 3400 4250 2    60   Input ~ 0
@@ -708,22 +528,12 @@ Wire Wire Line
 	3000 4250 3400 4250
 Wire Wire Line
 	3000 4350 3100 4350
-Text GLabel 2900 4850 0    60   Input ~ 0
+Text GLabel 3850 4800 0    60   Input ~ 0
 LED1
-Text GLabel 2900 5100 0    60   Input ~ 0
+Text GLabel 3850 5000 0    60   Input ~ 0
 LED2
-Text GLabel 2900 5350 0    60   Input ~ 0
+Text GLabel 3850 5200 0    60   Input ~ 0
 LED3
-Wire Wire Line
-	3100 4800 3100 4900
-Wire Wire Line
-	2900 4850 3100 4850
-Connection ~ 3100 4850
-Wire Wire Line
-	2900 5350 3250 5350
-Wire Wire Line
-	3250 5300 3250 5400
-Connection ~ 3250 5350
 Text GLabel 1550 1200 2    60   Input ~ 0
 LED1
 Text GLabel 1850 1300 2    60   Input ~ 0
@@ -738,9 +548,6 @@ Wire Wire Line
 	1450 1400 1550 1400
 Wire Wire Line
 	1450 1500 1450 1650
-Wire Wire Line
-	3000 4000 2500 4000
-Connection ~ 2500 4150
 $Comp
 L CONN_01X04 P4
 U 1 1 55C9CDF3
@@ -859,4 +666,153 @@ Wire Notes Line
 	800  2900 800  700 
 Text Notes 1100 2750 0    60   ~ 0
 Optional stuff to connect to older LED/Sensor boards\n
+NoConn ~ 3000 4450
+NoConn ~ 2500 4450
+NoConn ~ 2500 4350
+NoConn ~ 2500 4250
+Wire Wire Line
+	3850 4800 4550 4800
+Wire Wire Line
+	3850 5000 4550 5000
+Wire Wire Line
+	3850 5200 4550 5200
+Text GLabel 7600 5200 3    60   Input ~ 0
+LED1
+Text GLabel 7950 5200 3    60   Input ~ 0
+LED2
+Text GLabel 8250 5200 3    60   Input ~ 0
+LED3
+$Comp
+L R_PACK4 RP1
+U 1 1 55D684EC
+P 8700 2400
+F 0 "RP1" H 8700 2850 50  0000 C CNN
+F 1 "R_PACK4" H 8700 2350 50  0000 C CNN
+F 2 "Resistors_SMD:R_Array_Convex_4x0603" H 8700 2400 60  0001 C CNN
+F 3 "" H 8700 2400 60  0000 C CNN
+	1    8700 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L R_PACK4 RP2
+U 1 1 55D687C7
+P 8700 3050
+F 0 "RP2" H 8700 3500 50  0000 C CNN
+F 1 "R_PACK4" H 8700 3000 50  0000 C CNN
+F 2 "Resistors_SMD:R_Array_Convex_4x0603" H 8700 3050 60  0001 C CNN
+F 3 "" H 8700 3050 60  0000 C CNN
+	1    8700 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8200 2050 8500 2050
+Wire Wire Line
+	7850 2150 8500 2150
+Wire Wire Line
+	8200 2250 8500 2250
+Wire Wire Line
+	7850 2350 8500 2350
+Wire Wire Line
+	8200 2700 8500 2700
+Wire Wire Line
+	7850 2800 8500 2800
+Wire Wire Line
+	8200 2900 8500 2900
+Wire Wire Line
+	7850 3000 8500 3000
+Wire Wire Line
+	9200 1950 9200 3000
+Wire Wire Line
+	9200 3000 8900 3000
+Wire Wire Line
+	8900 2900 9200 2900
+Connection ~ 9200 2900
+Wire Wire Line
+	8900 2800 9200 2800
+Connection ~ 9200 2800
+Wire Wire Line
+	8900 2700 9200 2700
+Connection ~ 9200 2700
+Wire Wire Line
+	8900 2350 9200 2350
+Connection ~ 9200 2350
+Wire Wire Line
+	8900 2250 9200 2250
+Connection ~ 9200 2250
+Wire Wire Line
+	8900 2150 9200 2150
+Connection ~ 9200 2150
+Wire Wire Line
+	8900 2050 9200 2050
+Connection ~ 9200 2050
+$Comp
+L CONN_01X01 P5
+U 1 1 55D6B6D9
+P 1800 6500
+F 0 "P5" H 1800 6600 50  0000 C CNN
+F 1 "CONN_01X01" V 1900 6500 50  0000 C CNN
+F 2 "Connect:1pin" H 1800 6500 60  0001 C CNN
+F 3 "" H 1800 6500 60  0000 C CNN
+	1    1800 6500
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X01 P6
+U 1 1 55D6B9F2
+P 2250 6500
+F 0 "P6" H 2250 6600 50  0000 C CNN
+F 1 "CONN_01X01" V 2350 6500 50  0000 C CNN
+F 2 "Connect:1pin" H 2250 6500 60  0001 C CNN
+F 3 "" H 2250 6500 60  0000 C CNN
+	1    2250 6500
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X01 P7
+U 1 1 55D6BA96
+P 2600 6500
+F 0 "P7" H 2600 6600 50  0000 C CNN
+F 1 "CONN_01X01" V 2700 6500 50  0000 C CNN
+F 2 "Connect:1pin" H 2600 6500 60  0001 C CNN
+F 3 "" H 2600 6500 60  0000 C CNN
+	1    2600 6500
+	0    1    1    0   
+$EndComp
+$Comp
+L CONN_01X01 P8
+U 1 1 55D6BAEF
+P 2950 6500
+F 0 "P8" H 2950 6600 50  0000 C CNN
+F 1 "CONN_01X01" V 3050 6500 50  0000 C CNN
+F 2 "Connect:1pin" H 2950 6500 60  0001 C CNN
+F 3 "" H 2950 6500 60  0000 C CNN
+	1    2950 6500
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1800 6300 1800 6100
+Wire Wire Line
+	1800 6100 2950 6100
+Wire Wire Line
+	1950 6100 1950 5850
+Wire Wire Line
+	2250 6100 2250 6300
+Connection ~ 1950 6100
+Wire Wire Line
+	2600 6100 2600 6300
+Connection ~ 2250 6100
+Wire Wire Line
+	2950 6100 2950 6300
+Connection ~ 2600 6100
+$Comp
+L GND #PWR018
+U 1 1 55D6EE41
+P 1950 5850
+F 0 "#PWR018" H 1950 5600 50  0001 C CNN
+F 1 "GND" H 1950 5700 50  0000 C CNN
+F 2 "" H 1950 5850 60  0000 C CNN
+F 3 "" H 1950 5850 60  0000 C CNN
+	1    1950 5850
+	-1   0    0    1   
+$EndComp
 $EndSCHEMATC

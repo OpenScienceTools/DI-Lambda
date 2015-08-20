@@ -28,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:efm8ub10f8g-b-qfn20
 LIBS:Controller-Bee-cache
 EELAYER 25 0
 EELAYER END
@@ -371,26 +370,6 @@ F 3 "" H 10450 4850 60  0000 C CNN
 	1    10450 4850
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	10450 4850 10450 5600
-Wire Wire Line
-	10450 5000 10300 5000
-Wire Wire Line
-	10450 5600 9650 5600
-Wire Wire Line
-	9650 5600 9650 5300
-Wire Wire Line
-	9650 5300 9800 5300
-Connection ~ 10450 5000
-Wire Wire Line
-	10300 5100 10450 5100
-Connection ~ 10450 5100
-Wire Wire Line
-	10300 5200 10450 5200
-Connection ~ 10450 5200
-Wire Wire Line
-	10300 5300 10450 5300
-Connection ~ 10450 5300
 $Comp
 L GND #PWR08
 U 1 1 55CC2029
@@ -674,4 +653,12 @@ Text Label 4650 3700 0    60   ~ 0
 d+
 Text Label 4650 3800 0    60   ~ 0
 d-
+Wire Wire Line
+	10300 5000 10450 5000
+Wire Wire Line
+	10450 5000 10450 4850
+NoConn ~ 10300 5100
+NoConn ~ 10300 5200
+NoConn ~ 10300 5300
+NoConn ~ 9800 5300
 $EndSCHEMATC
