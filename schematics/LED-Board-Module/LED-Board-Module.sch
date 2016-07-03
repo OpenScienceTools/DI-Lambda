@@ -1,0 +1,503 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:efm8bb10f2g
+LIBS:ap3023
+LIBS:bcr42xu
+LIBS:LED-Board-Module-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L VDD #PWR01
+U 1 1 5745A26C
+P 3000 2400
+F 0 "#PWR01" H 3000 2250 50  0001 C CNN
+F 1 "VDD" H 3020 2579 50  0000 C CNN
+F 2 "" H 3000 2400 50  0000 C CNN
+F 3 "" H 3000 2400 50  0000 C CNN
+	1    3000 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 5745A29C
+P 3000 3000
+F 0 "#PWR02" H 3000 2750 50  0001 C CNN
+F 1 "GND" H 3008 2821 50  0000 C CNN
+F 2 "" H 3000 3000 50  0000 C CNN
+F 3 "" H 3000 3000 50  0000 C CNN
+	1    3000 3000
+	1    0    0    -1  
+$EndComp
+Text GLabel 3100 2600 2    60   Input ~ 0
+SCL
+Text GLabel 3350 2700 2    60   Input ~ 0
+SDA
+Wire Wire Line
+	2900 2500 3000 2500
+Wire Wire Line
+	3000 2500 3000 2400
+Wire Wire Line
+	2900 2600 3100 2600
+Wire Wire Line
+	2900 2700 3350 2700
+Wire Wire Line
+	3000 2800 3000 3000
+$Comp
+L EFM8BB10F2G U2
+U 1 1 5745B630
+P 3650 4850
+F 0 "U2" H 3675 5865 60  0000 C CNN
+F 1 "EFM8BB10F2G" H 3675 5751 60  0000 C CNN
+F 2 "Footprints:Silabs-QFN20" H 3650 4850 60  0001 C CNN
+F 3 "http://www.silabs.com/Support%20Documents/TechnicalDocs/EFM8BB1-DataSheet.pdf" H 3650 4850 60  0001 C CNN
+F 4 "-" H 3650 4850 60  0001 C CNN "Description"
+F 5 "-" H 3650 4850 60  0001 C CNN "Characteristics"
+F 6 "Silicon Labs" H 3650 4850 60  0001 C CNN "MFR"
+F 7 "EFM8BB10F2G-A-QFN20R" H 3650 4850 60  0001 C CNN "MPN"
+F 8 "QFN20" H 3650 4850 60  0001 C CNN "Package"
+F 9 "SPEC" H 3650 4850 60  0001 C CNN "Source"
+F 10 "Yes" H 3650 4850 60  0001 C CNN "Used"
+F 11 "-" H 3650 4850 60  0001 C CNN "Notes"
+	1    3650 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 5100 4750 5100
+Wire Wire Line
+	2700 4750 2600 4750
+$Comp
+L VDD #PWR03
+U 1 1 5745BC16
+P 2600 4950
+F 0 "#PWR03" H 2600 4800 50  0001 C CNN
+F 1 "VDD" V 2621 5080 50  0000 L CNN
+F 2 "" H 2600 4950 50  0000 C CNN
+F 3 "" H 2600 4950 50  0000 C CNN
+	1    2600 4950
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2700 4950 2600 4950
+$Comp
+L GND #PWR04
+U 1 1 5745BC8E
+P 2600 4750
+F 0 "#PWR04" H 2600 4500 50  0001 C CNN
+F 1 "GND" V 2608 4619 50  0000 R CNN
+F 2 "" H 2600 4750 50  0000 C CNN
+F 3 "" H 2600 4750 50  0000 C CNN
+	1    2600 4750
+	0    1    1    0   
+$EndComp
+$Comp
+L GND #PWR05
+U 1 1 5745BCFA
+P 4750 5100
+F 0 "#PWR05" H 4750 4850 50  0001 C CNN
+F 1 "GND" V 4758 4969 50  0000 R CNN
+F 2 "" H 4750 5100 50  0000 C CNN
+F 3 "" H 4750 5100 50  0000 C CNN
+	1    4750 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TEST_1P W1
+U 1 1 5745BEB5
+P 3750 3450
+F 0 "W1" H 3600 3500 50  0000 L CNN
+F 1 "TX" V 3750 3650 50  0000 L CNN
+F 2 "Footprints:TEST_POINT" H 3950 3450 50  0001 C CNN
+F 3 "" H 3950 3450 50  0000 C CNN
+F 4 "-" H 3750 3450 60  0001 C CNN "Description"
+F 5 "-" H 3750 3450 60  0001 C CNN "Characteristics"
+F 6 "-" H 3750 3450 60  0001 C CNN "MFR"
+F 7 "-" H 3750 3450 60  0001 C CNN "MPN"
+F 8 "-" H 3750 3450 60  0001 C CNN "Package"
+F 9 "-" H 3750 3450 60  0001 C CNN "Source"
+F 10 "No" H 3750 3450 60  0001 C CNN "Used"
+F 11 "-" H 3750 3450 60  0001 C CNN "Notes"
+	1    3750 3450
+	1    0    0    -1  
+$EndComp
+$Comp
+L TEST_1P W6
+U 1 1 5745BEFF
+P 3900 3650
+F 0 "W6" H 3961 3772 50  0000 L CNN
+F 1 "RX" V 3900 3850 50  0000 L CNN
+F 2 "Footprints:TEST_POINT" H 4100 3650 50  0001 C CNN
+F 3 "" H 4100 3650 50  0000 C CNN
+F 4 "-" H 3900 3650 60  0001 C CNN "Description"
+F 5 "-" H 3900 3650 60  0001 C CNN "Characteristics"
+F 6 "-" H 3900 3650 60  0001 C CNN "MFR"
+F 7 "-" H 3900 3650 60  0001 C CNN "MPN"
+F 8 "-" H 3900 3650 60  0001 C CNN "Package"
+F 9 "-" H 3900 3650 60  0001 C CNN "Source"
+F 10 "No" H 3900 3650 60  0001 C CNN "Used"
+F 11 "-" H 3900 3650 60  0001 C CNN "Notes"
+	1    3900 3650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 4050 3750 3450
+Wire Wire Line
+	3900 4050 3900 3650
+Text GLabel 3550 5900 3    60   Input ~ 0
+SCL
+Text GLabel 3400 5900 3    60   Input ~ 0
+SDA
+Text GLabel 4400 2500 0    60   Input ~ 0
+S1
+Text GLabel 4000 2600 0    60   Input ~ 0
+S2
+Wire Wire Line
+	4400 2500 4550 2500
+Wire Wire Line
+	4000 2600 4550 2600
+Wire Wire Line
+	4300 2700 4550 2700
+Text GLabel 3900 5900 3    60   Input ~ 0
+S2
+Text GLabel 4850 5250 2    60   Input ~ 0
+S1
+Wire Wire Line
+	3900 5900 3900 5650
+Wire Wire Line
+	4650 5250 4850 5250
+$Comp
+L VDD #PWR06
+U 1 1 5745F1D8
+P 4600 5600
+F 0 "#PWR06" H 4600 5450 50  0001 C CNN
+F 1 "VDD" H 4620 5779 50  0000 C CNN
+F 2 "" H 4600 5600 50  0000 C CNN
+F 3 "" H 4600 5600 50  0000 C CNN
+	1    4600 5600
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C2
+U 1 1 5745F1FE
+P 4450 5900
+F 0 "C2" H 4300 5950 50  0000 L CNN
+F 1 "1uF" H 4300 5800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4450 5900 50  0001 C CNN
+F 3 "" H 4450 5900 50  0000 C CNN
+F 4 "-" H 4450 5900 60  0001 C CNN "Description"
+F 5 "-" H 4450 5900 60  0001 C CNN "Characteristics"
+F 6 "-" H 4450 5900 60  0001 C CNN "MFR"
+F 7 "-" H 4450 5900 60  0001 C CNN "MPN"
+F 8 "0603" H 4450 5900 60  0001 C CNN "Package"
+F 9 "ANY" H 4450 5900 60  0001 C CNN "Source"
+F 10 "Yes" H 4450 5900 60  0001 C CNN "Used"
+F 11 "-" H 4450 5900 60  0001 C CNN "Notes"
+	1    4450 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L C_Small C3
+U 1 1 5745F236
+P 4750 5900
+F 0 "C3" H 4850 5950 50  0000 L CNN
+F 1 "100nF" H 4800 5800 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4750 5900 50  0001 C CNN
+F 3 "" H 4750 5900 50  0000 C CNN
+F 4 "-" H 4750 5900 60  0001 C CNN "Description"
+F 5 "> 6.3v ceramic capacitor; any precision" H 4750 5900 60  0001 C CNN "Characteristics"
+F 6 "-" H 4750 5900 60  0001 C CNN "MFR"
+F 7 "-" H 4750 5900 60  0001 C CNN "MPN"
+F 8 "0603" H 4750 5900 60  0001 C CNN "Package"
+F 9 "ANY" H 4750 5900 60  0001 C CNN "Source"
+F 10 "Yes" H 4750 5900 60  0001 C CNN "Used"
+F 11 "-" H 4750 5900 60  0001 C CNN "Notes"
+	1    4750 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR07
+U 1 1 5745F26A
+P 4600 6250
+F 0 "#PWR07" H 4600 6000 50  0001 C CNN
+F 1 "GND" H 4608 6071 50  0000 C CNN
+F 2 "" H 4600 6250 50  0000 C CNN
+F 3 "" H 4600 6250 50  0000 C CNN
+	1    4600 6250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 5600 4600 5700
+Wire Wire Line
+	4450 5700 4750 5700
+Wire Wire Line
+	4450 5700 4450 5800
+Wire Wire Line
+	4750 5700 4750 5800
+Connection ~ 4600 5700
+Wire Wire Line
+	4450 6000 4450 6150
+Wire Wire Line
+	4450 6150 4750 6150
+Wire Wire Line
+	4750 6150 4750 6000
+Wire Wire Line
+	4600 6250 4600 6150
+Connection ~ 4600 6150
+Text GLabel 2550 4600 0    60   Input ~ 0
+CTRL
+$Comp
+L LED D2
+U 1 1 57466C85
+P 7300 4250
+F 0 "D2" V 7348 4139 50  0000 R CNN
+F 1 "LED" V 7252 4139 50  0000 R CNN
+F 2 "LEDs:LED-5MM" H 7300 4250 50  0001 C CNN
+F 3 "" H 7300 4250 50  0000 C CNN
+F 4 "-" H 7300 4250 60  0001 C CNN "Description"
+F 5 "-" H 7300 4250 60  0001 C CNN "Characteristics"
+F 6 "-" H 7300 4250 60  0001 C CNN "MFR"
+F 7 "-" H 7300 4250 60  0001 C CNN "MPN"
+F 8 "T5" H 7300 4250 60  0001 C CNN "Package"
+F 9 "ANY" H 7300 4250 60  0001 C CNN "Source"
+F 10 "Yes" H 7300 4250 60  0001 C CNN "Used"
+F 11 "-" H 7300 4250 60  0001 C CNN "Notes"
+	1    7300 4250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TEST_1P W7
+U 1 1 5747162F
+P 1950 5100
+F 0 "W7" V 2155 5174 50  0000 C CNN
+F 1 "C2CK" V 2059 5174 50  0000 C CNN
+F 2 "Footprints:TEST_POINT" H 2150 5100 50  0001 C CNN
+F 3 "" H 2150 5100 50  0000 C CNN
+F 4 "-" H 1950 5100 60  0001 C CNN "Description"
+F 5 "-" H 1950 5100 60  0001 C CNN "Characteristics"
+F 6 "-" H 1950 5100 60  0001 C CNN "MFR"
+F 7 "-" H 1950 5100 60  0001 C CNN "MPN"
+F 8 "-" H 1950 5100 60  0001 C CNN "Package"
+F 9 "-" H 1950 5100 60  0001 C CNN "Source"
+F 10 "No" H 1950 5100 60  0001 C CNN "Used"
+F 11 "-" H 1950 5100 60  0001 C CNN "Notes"
+	1    1950 5100
+	0    -1   -1   0   
+$EndComp
+$Comp
+L TEST_1P W8
+U 1 1 574716CB
+P 2150 5250
+F 0 "W8" V 2355 5324 50  0000 C CNN
+F 1 "C2D" V 2259 5324 50  0000 C CNN
+F 2 "Footprints:TEST_POINT" H 2350 5250 50  0001 C CNN
+F 3 "" H 2350 5250 50  0000 C CNN
+F 4 "-" H 2150 5250 60  0001 C CNN "Description"
+F 5 "-" H 2150 5250 60  0001 C CNN "Characteristics"
+F 6 "-" H 2150 5250 60  0001 C CNN "MFR"
+F 7 "-" H 2150 5250 60  0001 C CNN "MPN"
+F 8 "-" H 2150 5250 60  0001 C CNN "Package"
+F 9 "-" H 2150 5250 60  0001 C CNN "Source"
+F 10 "No" H 2150 5250 60  0001 C CNN "Used"
+F 11 "-" H 2150 5250 60  0001 C CNN "Notes"
+	1    2150 5250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2700 5100 1950 5100
+Wire Wire Line
+	2150 5250 2700 5250
+NoConn ~ 3550 4050
+NoConn ~ 3400 4050
+NoConn ~ 2700 4450
+NoConn ~ 4650 4450
+$Comp
+L CONN_01X03 P1
+U 1 1 5747F9F4
+P 4750 2600
+F 0 "P1" H 4830 2640 50  0000 L CNN
+F 1 "CONN_01X03" H 4830 2544 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x03" H 4750 2600 50  0001 C CNN
+F 3 "" H 4750 2600 50  0000 C CNN
+F 4 "THT Pin header 1x3 P=2.54 mm H=5~7mm" H 4750 2600 60  0001 C CNN "Description"
+F 5 "-" H 4750 2600 60  0001 C CNN "Characteristics"
+F 6 "-" H 4750 2600 60  0001 C CNN "MFR"
+F 7 "-" H 4750 2600 60  0001 C CNN "MPN"
+F 8 "-" H 4750 2600 60  0001 C CNN "Package"
+F 9 "ANY" H 4750 2600 60  0001 C CNN "Source"
+F 10 "Yes" H 4750 2600 60  0001 C CNN "Used"
+F 11 "-" H 4750 2600 60  0001 C CNN "Notes"
+	1    4750 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X04 P2
+U 1 1 5747FBC4
+P 2700 2650
+F 0 "P2" H 2781 2690 50  0000 L CNN
+F 1 "CONN_01X04" H 2781 2594 50  0000 L CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x04" H 2700 2650 50  0001 C CNN
+F 3 "" H 2700 2650 50  0000 C CNN
+F 4 "THT Pin header 1x4 P=2.54 mm H=5~7mm" H 2700 2650 60  0001 C CNN "Description"
+F 5 "-" H 2700 2650 60  0001 C CNN "Characteristics"
+F 6 "-" H 2700 2650 60  0001 C CNN "MFR"
+F 7 "-" H 2700 2650 60  0001 C CNN "MPN"
+F 8 "-" H 2700 2650 60  0001 C CNN "Package"
+F 9 "ANY" H 2700 2650 60  0001 C CNN "Source"
+F 10 "Yes" H 2700 2650 60  0001 C CNN "Used"
+F 11 "-" H 2700 2650 60  0001 C CNN "Notes"
+	1    2700 2650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2800 3000 2800
+$Comp
+L GND #PWR08
+U 1 1 57482ABE
+P 3900 5100
+F 0 "#PWR08" H 3900 4850 50  0001 C CNN
+F 1 "GND" H 3908 4921 50  0000 C CNN
+F 2 "" H 3900 5100 50  0000 C CNN
+F 3 "" H 3900 5100 50  0000 C CNN
+	1    3900 5100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 5050 3900 5050
+Wire Wire Line
+	3900 5050 3900 5100
+Wire Wire Line
+	3400 5650 3400 5900
+Wire Wire Line
+	3550 5900 3550 5650
+Wire Wire Line
+	2550 4600 2700 4600
+NoConn ~ 4650 4950
+NoConn ~ 4650 4750
+NoConn ~ 4650 4600
+Text GLabel 4300 2700 0    60   Input ~ 0
+LED
+$Comp
+L BCR42XU U1
+U 1 1 57712D0D
+P 6300 4750
+F 0 "U1" H 6275 5252 60  0000 C CNN
+F 1 "BCR42XU" H 6275 5138 60  0000 C CNN
+F 2 "Footprints:SOT26" H 6300 4750 60  0001 C CNN
+F 3 "http://www.diodes.com/_files/datasheets/BCR420UW6_BCR421UW6.pdf" H 6300 4750 60  0001 C CNN
+F 4 "Constant Current Regulator" H 6300 4750 60  0001 C CNN "Description"
+F 5 "-" H 6300 4750 60  0001 C CNN "Characteristics"
+F 6 "Diodes Inc" H 6300 4750 60  0001 C CNN "MFR"
+F 7 "BCR421U" H 6300 4750 60  0001 C CNN "MPN"
+F 8 "SOT26 / SC74R" H 6300 4750 60  0001 C CNN "Package"
+F 9 "SPEC" H 6300 4750 60  0001 C CNN "Source"
+F 10 "Yes" H 6300 4750 60  0001 C CNN "Used"
+F 11 "-" H 6300 4750 60  0001 C CNN "Notes"
+	1    6300 4750
+	1    0    0    -1  
+$EndComp
+Text GLabel 5650 4550 0    60   Input ~ 0
+CTRL
+Wire Wire Line
+	5650 4550 5850 4550
+$Comp
+L GND #PWR09
+U 1 1 57714304
+P 6900 4950
+F 0 "#PWR09" H 6900 4700 50  0001 C CNN
+F 1 "GND" H 6908 4771 50  0000 C CNN
+F 2 "" H 6900 4950 50  0000 C CNN
+F 3 "" H 6900 4950 50  0000 C CNN
+	1    6900 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6700 4850 6900 4850
+Wire Wire Line
+	6900 4850 6900 4950
+Wire Wire Line
+	6700 4700 7300 4700
+$Comp
+L R R1
+U 1 1 57714B38
+P 6850 4250
+F 0 "R1" H 6920 4298 50  0000 L CNN
+F 1 "96R" H 6920 4202 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603" V 6780 4250 50  0001 C CNN
+F 3 "" H 6850 4250 50  0000 C CNN
+F 4 "1% precision" H 6850 4250 60  0001 C CNN "Description"
+F 5 "-" H 6850 4250 60  0001 C CNN "Characteristics"
+F 6 "-" H 6850 4250 60  0001 C CNN "MFR"
+F 7 "-" H 6850 4250 60  0001 C CNN "MPN"
+F 8 "0603" H 6850 4250 60  0001 C CNN "Package"
+F 9 "ANY" H 6850 4250 60  0001 C CNN "Source"
+F 10 "Yes" H 6850 4250 60  0001 C CNN "Used"
+F 11 "-" H 6850 4250 60  0001 C CNN "Notes"
+	1    6850 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 4400 6850 4550
+Wire Wire Line
+	6850 4550 6700 4550
+$Comp
+L GND #PWR010
+U 1 1 57714BF5
+P 6850 3950
+F 0 "#PWR010" H 6850 3700 50  0001 C CNN
+F 1 "GND" H 6858 3771 50  0000 C CNN
+F 2 "" H 6850 3950 50  0000 C CNN
+F 3 "" H 6850 3950 50  0000 C CNN
+	1    6850 3950
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6850 3950 6850 4100
+Text GLabel 7300 3850 1    60   Input ~ 0
+LED
+Wire Wire Line
+	7300 3850 7300 4050
+NoConn ~ 3750 5650
+Wire Wire Line
+	7300 4700 7300 4450
+NoConn ~ 5850 4700
+NoConn ~ 5850 4850
+$EndSCHEMATC
